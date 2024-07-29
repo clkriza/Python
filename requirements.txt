@@ -1,0 +1,6 @@
+asyncio==3.4.3
+datetime==4.7
+pandas==2.1.0
+streamlit==1.21.0
+streamlit-autorefresh==0.0.1
+requests==2.31.0
