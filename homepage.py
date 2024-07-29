@@ -6,7 +6,6 @@ import streamlit as st
 import os
 import json
 import uuid
-from youtube_search import YoutubeSearch
 import requests
 from streamlit_autorefresh import st_autorefresh
 
