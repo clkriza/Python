@@ -7,21 +7,15 @@ import os
 import json
 import uuid
 import requests
-from streamlit_autorefresh import st_autorefresh
-
-
-
-
 
 # Türkiye Saat Dilimi
 turkey_tz = 'Europe/Istanbul'
 
 saat = st.container(border=True)
 # Günün Tarih ve Saati
-now = datetime.datetime.now(datetime.timezone.utc).astimezone(datetime.timezone(datetime.timedelta(hours=int(time.timezone/3600))))
+now = datetime.datetime.now(datetime.timezone.utc).astimezone(datetime.timezone(datetime.timedelta(hours=int(time.timezone / 3600))))
 
 saat.text(f"🕘 {now.strftime('%d-%m-%Y')} / {now.strftime('%H:%M:%S')}")
-
 
 # Dosya Yolu
 tasks_file = "tasks.json"
@@ -87,7 +81,6 @@ if option == "Rapor":
         with col2:
             if st.button("Sil", key=f"del-{task['id']}"):
                 delete_task(task["id"])
-
 
     # Bekleyen Görevler Listesi
     st.markdown("#### 🕘 Bekleyen Görevler")
@@ -185,4 +178,3 @@ with seç:
         st.info("🐣 Çalışırken biraz rahatlamak istersen hikayelerden birini seçmelisin.")
     else:
         st.warning("Beni delirteceksin.")
-
